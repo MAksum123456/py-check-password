@@ -22,6 +22,7 @@ from app.main import check_password
         ),
         pytest.param("passwordQ!23sjaQa", False, id="too long"),
         pytest.param("12345678", False, id="only digits"),
+        pytest.param("stRong!@pas", False, id="no digit"),
     ]
 )
 def test_check_password(password: str, is_valid: bool) -> None:
