@@ -6,7 +6,7 @@ from app.main import check_password
     "password, is_valid",
     [
         pytest.param("qwerty", False, id="too short"),
-        pytest.param("qwert!E12", False, id="too short"),
+        pytest.param("qwt!E12", False, id="too short"),
         pytest.param("password1@", False, id="no uppercase letter"),
         pytest.param(
             "Password1@",
